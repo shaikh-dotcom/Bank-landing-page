@@ -184,6 +184,7 @@ p {
 }
 footer {
   background-color: var(--bg-blue);
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 2fr;
   justify-content: center;
@@ -220,6 +221,13 @@ footer {
 }
 .shaikh {
   color: #00f0ff;
+}
+.info {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+.shaikh:hover {
+  color: orangered;
 }
 @media (max-width: 768px) {
   main {
