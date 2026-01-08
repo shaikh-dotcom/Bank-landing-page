@@ -1,15 +1,15 @@
+* {
+  box-sizing: border-box;
+}
 :root {
   --bg-gray-light: hsl(220, 16%, 96%);
   --bg-white: hsl(0, 0%, 98%);
   --bg-blue: hsl(233, 26%, 24%);
 }
-* {
-  box-sizing: border-box;
-}
 body {
   padding: 0;
   margin: 0;
-  height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
   font-family: "Public Sans", sans-serif;
 }
@@ -229,6 +229,19 @@ footer {
 .shaikh:hover {
   color: orangered;
 }
+
+@media (max-width: 1024px) {
+  .hero-para {
+    padding: 0;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+}
+
 @media (max-width: 768px) {
   main {
     padding: 0;
@@ -308,71 +321,10 @@ footer {
     margin: 0 auto;
   }
 }
-@media (max-width: 1024px) {
-  .hero-para {
-    padding: 0;
-  }
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    font-size: 30px;
-  }
-}
 @media (max-width: 480px) {
-  main {
-    padding: 0;
-  }
-  header {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-  }
-  .navigation {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-  }
-  .navigation.active {
-    display: flex !important;
-    flex-direction: column;
-    position: absolute;
-    width: 80%;
-    top: 70px;
-    left: 5%;
-    right: 5%;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    gap: 20px;
-    z-index: 999;
-  }
-  .hero-section {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    padding: 0;
-  }
-  .hero-image-section {
-    grid-row: 1;
-    overflow-x: hidden;
-  }
-  .hero-image {
-    justify-self: center;
-    position: relative;
-    left: 5%;
-    transform: translateY(-6%);
-  }
   .hero-para {
-    grid-row: 2;
     width: 100%;
-    text-align: center;
     margin: 0;
-    padding: 20px;
-    padding-bottom: 50px;
-    z-index: 3;
   }
   h1 {
     font-size: 32px;
@@ -386,13 +338,8 @@ footer {
   p {
     font-size: 15px;
   }
-  header .req-btn {
-    display: none;
-  }
   .middle-section {
-    text-align: center;
     width: 100%;
-    padding: 20px;
   }
   .bottom-section {
     width: 100%;
@@ -404,14 +351,6 @@ footer {
   }
   .bottom-section-article {
     padding: 20px;
-  }
-  .round-cards {
-    grid-template-columns: 1fr;
-  }
-  .square-cards {
-    grid-template-columns: 1fr;
-    row-gap: 20px;
-    padding-bottom: 50px;
   }
   footer {
     grid-template-columns: 1fr;
